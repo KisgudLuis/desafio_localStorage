@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios con LocalStorage y Tabla</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <!-- SECCIÓN 1: FORMULARIO DE REGISTRO -->
+        <div class="card">
+            <h2>Registro de Usuarios</h2>
+            <form id="user-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre de Usuario</label>
+                    <input type="text" id="nombre" placeholder="Ej. Juan Pérez">
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" placeholder="correo@ejemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="clave">Clave Ficticia</label>
+                    <input type="password" id="clave" placeholder="Mínimo 6 caracteres">
+                </div>
+                <button type="submit">Guardar Usuario</button>
+            </form>
+            <div id="form-message" class="message"></div>
+        </div>
+
+        <!-- SECCIÓN 2: LISTA Y BÚSQUEDA DE USUARIOS -->
+        <div class="card">
+            <h3>Usuarios Registrados (<span id="user-count" class="counter-badge">0</span>)</h3>
+            
+            <div class="form-group search-box">
+                <label for="search-input">Buscar Usuario por Nombre</label>
+                <input type="text" id="search-input" placeholder="Escribe para filtrar...">
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo Electrónico</th>
+                        <th>Clave Ficticia</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Los datos se cargan dinámicamente aquí -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
